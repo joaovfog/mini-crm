@@ -1,0 +1,31 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "email": "joao.silva@example.com",
+      "phone": "+55 11 99999-0001",
+      "status": "active",
+      "createdAt": "2024-01-10T10:00:00.000Z",
+      "notes": "Cliente antigo, alto potencial de upsell."
+    },
+    {
+      "id": 2,
+      "name": "Maria Souza",
+      "email": "maria.souza@example.com",
+      "phone": "+55 21 98888-0002",
+      "status": "inactive",
+      "createdAt": "2024-02-05T14:30:00.000Z",
+      "notes": "Cancelou recentemente, observar possíveis motivos."
+    },
+    {
+      "id": 3,
+      "name": "Carlos Pereira",
+      "email": "carlos.pereira@example.com",
+      "phone": "+55 31 97777-0003",
+      "status": "active",
+      "createdAt": "2024-03-01T09:15:00.000Z",
+      "notes": "Interessado em novos serviços."
+    }
+  ]
+}
