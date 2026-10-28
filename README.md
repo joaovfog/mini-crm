@@ -1,17 +1,14 @@
-# MiniCRM – Frontend React
+# MiniCRM – React Frontend
 
-Interface web para gerenciamento de clientes (MiniCRM), desenvolvida como teste técnico
-para a vaga de Frontend React Developer.
+Web interface for customer management (MiniCRM), developed as a technical assessment for the Frontend React Developer position.
 
-## Objetivo
+## Goal
 
-Criar uma aplicação frontend moderna utilizando React, Tailwind CSS e shadcn/ui,
-integrada a uma API REST mockada, com foco em organização, UX, acessibilidade
-e boas práticas de desenvolvimento.
+Build a modern frontend application using React, Tailwind CSS, and shadcn/ui, integrated with a mocked REST API, with a focus on code organization, UX, accessibility, and development best practices.
 
 ---
 
-## Tecnologias Utilizadas
+## Tech Stack
 
 - React + TypeScript
 - Vite
@@ -24,54 +21,40 @@ e boas práticas de desenvolvimento.
 
 ---
 
-## Funcionalidades
+## Features
 
-- Listagem de clientes
-- Busca por nome ou e-mail
-- Filtro por status (ativo / inativo)
-- Visualização de detalhes do cliente
-- Criação e edição de clientes
-- Estados de loading, erro e lista vazia
-
----
-
-## Principais Decisões de Implementação
-
-A aplicação foi estruturada priorizando clareza de responsabilidades, experiência do usuário e boas práticas de frontend.
-
-- Arquitetura baseada em componentes:
-
-A UI foi dividida em componentes reutilizáveis (CustomerTable, CustomerFilters, CustomerDialog, CustomerForm), facilitando manutenção, testes e evolução do código.
-
-- Gerenciamento de dados com Tanstack Query:
-
-O Tanstack Query foi utilizado para centralizar a lógica de busca, criação, edição e exclusão dos clientes, garantindo cache automático, estados explícitos de loading e erro e atualização consistente da lista após mutações.
-
-- Fomulários com React Hook Form + Zod:
-
-A criação e edição de clientes utilizam validação baseada em schema, garantindo tipagem, mensagens de erro claras e melhor experiência de preenchimento.
-
-- Tratamento explícito de estados da aplicação:
-
-A interface diferencia claramento o loading inicial de dados, estado vazio (sem clientes cadastrados), estado vazio quando filtros/busca não retornar resultados e estado de erro ao falhar a comunicação com a API.
-
-- Busca com debounce e filtros memorizados:
-
-A busca por nome/e-mail utiliza debounce para evitar reprocessamentos desnecessários, e filtros/ordenação são memorizados com useMemo, melhorando performance e previsibilidade.
-
-- UX e feedback ao usuário:
-
-A aplicação fornece feedback visual consistente através de toasts para ações de sucesso/erro (criar, editar, excluir), estados visuais de carregamento e confirmação explícita para ações destrutivas (exclusão).
-
-- API mockada com JSON Server via Docker:
-
-O uso de JSON Server em container Docker permite simular uma API REST realista, mantendo o frontend desacoplado e pronto para integração futura com um backend real.
+- Customer listing
+- Search by name or email
+- Filter by status (active / inactive)
+- Customer details view
+- Customer creation and editing
+- Loading, error, and empty list states
 
 ---
 
-## Como rodar o projeto
+## Key Implementation Decisions
 
-### Pré-requisitos
+The application was structured with a focus on clear separation of concerns, user experience, and frontend best practices.
+
+- Component-based architecture: The UI was split into reusable components (CustomerTable, CustomerFilters, CustomerDialog, CustomerForm), making the code easier to maintain, test, and evolve.
+
+- Data management with TanStack Query: TanStack Query was used to centralize the logic for fetching, creating, editing, and deleting customers, providing automatic caching, explicit loading and error states, and consistent list updates after mutations.
+
+- Forms with React Hook Form + Zod: Customer creation and editing use schema-based validation, ensuring type safety, clear error messages, and a better form-filling experience.
+
+- Explicit handling of application states: The interface clearly distinguishes between the initial data loading state, the empty state (no customers registered), the empty state when filters/search return no results, and the error state when communication with the API fails.
+
+- Debounced search and memoized filters: Search by name/email uses debouncing to avoid unnecessary reprocessing, and filters/sorting are memoized with useMemo, improving performance and predictability.
+
+- UX and user feedback: The application provides consistent visual feedback through toasts for success/error actions (create, edit, delete), visual loading states, and explicit confirmation for destructive actions (deletion).
+
+- Mocked API with JSON Server via Docker: Running JSON Server in a Docker container makes it possible to simulate a realistic REST API, keeping the frontend decoupled and ready for future integration with a real backend.
+
+---
+
+## How to Run the Project
+
+### Prerequisites
 
 - Node.js
 - Docker
